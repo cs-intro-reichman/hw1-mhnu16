@@ -13,7 +13,14 @@ public class TimeFormat {
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
         
-		System.out.printf("%d:%02d %s", hours % 12, minutes, hours < 12 ? "AM" : "PM");
+		String period = hours < 12 ? "AM" : "PM";
+		if (hours == 0) {
+		    hours = 12;
+		} else if (hours > 12) {
+		    hours = hours % 12;
+		}
+
+		System.out.printf("%d:%02d %s", hours, minutes, period);
 
 		/* Or the following longer solution :P
 		String output = "";
