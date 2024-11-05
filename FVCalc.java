@@ -8,7 +8,7 @@ public class FVCalc {
 		int futureValue;
 		futureValue = (int) (initalAmount * Math.pow(1 + (interestRate / 100), numOfYears));
 
-		System.out.printf("After %s years, $%d saved at %.1f%% will yield $%d",
+		System.out.printf("After %s years, a $%d saved at %.1f%% will yield $%d",
 				numOfYears, initalAmount, interestRate, futureValue);
 	}
 }
